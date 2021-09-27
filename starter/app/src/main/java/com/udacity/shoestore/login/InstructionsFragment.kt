@@ -14,7 +14,7 @@ import androidx.annotation.NonNull
 
 
 
-class WelcomeFragment : Fragment() {
+class InstructionsFragment : Fragment() {
 
 
     override fun onCreateView(

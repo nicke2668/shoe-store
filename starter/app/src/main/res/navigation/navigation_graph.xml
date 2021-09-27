@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:id="@+id/navigation_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/telematics_navigation_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        app:popUpTo="@id/loginFragment"
+        android:name="com.example.shoestore.ui.login.WelcomeFragment"
+        android:label="WelcomeFragment" />
+
+    <fragment
+        android:id="@+id/instructionsFragment"
+        app:popUpTo="@id/loginFragment"
+        android:name="com.example.shoestore.ui.login.InstructionsFragment"
+        android:label="InstructionsFragment" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.shoestore.ui.login.LoginFragment"
+        android:label="LoginFragment" />
+
+    <fragment
+        android:id="@+id/shoeListingFragment"
+        android:name="com.example.shoestore.ui.login.ShoeListFragment"
+        android:label="AceTelematicsDashboardFragment" />
+
+    <fragment
+        android:id="@+id/shoeDetailFragment"
+        android:name="com.example.shoestore.ui.login.DetailFragment"
+        android:label="AceTelematicsDisabledFragment" />
+
+    <action
+        android:id="@+id/instructionsFragmentNavigation"
+        app:destination="@id/instructionsFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim" />
+
+    <action
+        android:id="@+id/loginFragmentNavigation"
+        app:destination="@id/loginFragment"
+        app:popUpTo="@id/telematics_navigation_graph"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/shoeDetailFragmentNavigation"
+        app:destination="@id/shoeDetailFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim" />
+
+    <action
+        android:id="@+id/shoeListingFragmentNavigation"
+        app:destination="@id/shoeListingFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim" />
 
 </navigation>
